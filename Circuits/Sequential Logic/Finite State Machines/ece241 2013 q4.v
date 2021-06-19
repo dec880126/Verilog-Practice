@@ -30,11 +30,11 @@ module top_module (
     always@(*)begin
         case(state)
             A:next <= s[1]?B1:A;
-            B1:next <= s[2]?C1:(s[1]?B1:A);
-            B2:next <= s[2]?C1:(s[1]?B2:A);
-            C1:next <= s[3]?D:(s[2]?C1:B2);
-            C2:next <= s[3]?D:(s[2]?C2:B2);
-            D:next <= s[3]?D:C2;
+            B1:next <= s[2]? C1:(s[1]? B1:A);
+            B2:next <= s[2]? C1:(s[1]? B2:A);
+            C1:next <= s[3]? D:(s[2]? C1:B2);
+            C2:next <= s[3]? D:(s[2]? C2:B2);
+            D:next <= s[3]? D:C2;
             default:next <= A;
         endcase
     end
