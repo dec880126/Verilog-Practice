@@ -17,6 +17,6 @@ module top_module (
         endcase
     end
 
-    assign out = (state == D)?  1:0;
+    assign out = (state == D);
 
 endmodule

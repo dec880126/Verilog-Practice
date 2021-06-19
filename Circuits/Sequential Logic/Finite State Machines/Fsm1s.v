@@ -27,5 +27,5 @@ module top_module(clk, reset, in, out);
         endcase
     end
 
-    assign out = (state)? 1:0;
+    assign out = state;
 endmodule
